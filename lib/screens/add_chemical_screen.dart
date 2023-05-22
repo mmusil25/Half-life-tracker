@@ -7,8 +7,8 @@ class ChemicalInfo {
   num? halfLife = 0;
 }
 
-class SecondRoute extends StatelessWidget{
-  const SecondRoute({super.key});
+class ChemicalInput extends StatelessWidget{
+   ChemicalInput({super.key});
 
 late FocusNode _chemName;
 
@@ -27,13 +27,14 @@ Widget build(BuildContext context) {
           focusNode: _chemName,
           decoration: InputDecoration(
             border:  OutlineInputBorder(),
-            hintText: "Chemical Name"
-            )
+            hintText: "Chemical Name",
+            labelText: "Name of Substance"
+            ),
+            onSaved: (String? value){
+
+            },
           ),
-
-
-        ),
-        
+            
         ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
@@ -42,8 +43,6 @@ Widget build(BuildContext context) {
         ),
       ]
     ),
-
-
     );
 }
 }
