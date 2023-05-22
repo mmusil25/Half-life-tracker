@@ -1,18 +1,16 @@
-# Chemical Half Life Tracker App
+# half_life_tracker
 
-## Screenshots
+A new Flutter project.
 
-## What
+## Getting Started
 
-This is an app that allows you see the current amount of a given chemical there is in your body based on a few variables the user enters:
+This project is a starting point for a Flutter application.
 
-- Initial amount of chemical taken
-- Time the user took the initial amount
-- The half life of that particular chemical in the user's body. 
+A few resources to get you started if this is your first Flutter project:
 
-## Why
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-It can be hard to answer the question: Why do I feel agitated/anxious/tired? Knowing what chemicals are floating around in your body and brain will help you systematically answer that question. 
-
-## How
-
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
