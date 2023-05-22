@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:half_life_tracker/routes_tutorial/routes_main.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -28,18 +29,21 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _addNewChemical(){
+    Navigator.push(context,
+    MaterialPageRoute(builder: (context) => SecondRoute()));
+  }
+
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
+
         title: Text(widget.title),
       ),
       body: 
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+
         ListView( 
           children: [ 
             _createDataTable(),
@@ -57,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
     
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _addNewChemical,
         tooltip: 'Add Chemical',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.

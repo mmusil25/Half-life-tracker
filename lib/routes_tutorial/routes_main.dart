@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:half_life_tracker/references/route_ref.dart';
+
 
 class FirstRoute extends StatelessWidget {
   const FirstRoute({super.key});
@@ -13,7 +13,10 @@ class FirstRoute extends StatelessWidget {
       child: ElevatedButton(
         child: const Text('Add entry'),
         onPressed: (){
-          // Navigate to second route
+            Navigator.push(context,
+            MaterialPageRoute(builder: (context) => SecondRoute()));
+
+
           },
         )
       )
@@ -35,7 +38,7 @@ Widget build(BuildContext context) {
       child: ElevatedButton(
         onPressed: () {
 
-
+          Navigator.pop(context);
 
         },
         child: const Text('Confirm addition'),
