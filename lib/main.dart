@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/real_time_screen.dart';
-
+import 'package:half_life_tracker/testableUnits/real_time_screen.dart';
 
 void main() {
   runApp(const MyApp());

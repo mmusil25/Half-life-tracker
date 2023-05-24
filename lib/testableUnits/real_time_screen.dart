@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:half_life_tracker/forms/chemical_input_form.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
+  
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -12,6 +14,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _chemName = "";
 
   void _incrementCounter() {
     setState(() {
@@ -19,9 +22,15 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+//  async _managePersistenceData(){
+//    final prefs = await SharedPreferences.getInstance();
+//  }
+
   void _addNewChemical(){
     Navigator.push(context,
     MaterialPageRoute(builder: (context) => MyCustomForm()));
+
+
   }
 
   @override

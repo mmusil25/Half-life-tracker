@@ -18,6 +18,17 @@ class _MyCustomFormState extends State<MyCustomForm> {
   }
 
   @override
+  void initState(){
+    super.initState();
+    //myController.addListener(_persistLatestValued);
+  }
+
+  @override
+  void _persistLatestValue(){
+    // Add vals to persistence
+  }
+
+  @override
   Widget build(BuildContext context){
     return Scaffold(
         appBar: AppBar(
