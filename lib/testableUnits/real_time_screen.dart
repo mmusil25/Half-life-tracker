@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _addNewChemical(){
     Navigator.push(context,
-    MaterialPageRoute(builder: (context) => MyCustomForm()));
+    MaterialPageRoute(builder: (context) => const MyCustomForm()));
 
 
   }
@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('You have pushed the button this many times:'),
+                const Text('You have pushed the button this many times:'),
                 Text(
                   '$_counter',
                   style: Theme.of(context).textTheme.headlineMedium,
@@ -72,15 +72,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   List<DataColumn> _createColumns(){
     return [
-      DataColumn(label: Text('Chemical')),
-      DataColumn(label: Text('Start Time')),
-      DataColumn(label: Text('Amount remaining'))
+      const DataColumn(label: Text('Chemical')),
+      const DataColumn(label: Text('Start Time')),
+      const DataColumn(label: Text('Amount remaining'))
     ];
   }
   
   List<DataRow> _createRows() {
     return [
-      DataRow(
+      const DataRow(
         cells: [
         DataCell(Text('Caffeine')),
         DataCell(Text('7:00 AM')),

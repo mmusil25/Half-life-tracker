@@ -41,7 +41,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
             TextFormField(
               restorationId: 'chemical_name_field',
               controller: myController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border:  OutlineInputBorder(),
                 hintText: "Chemical Name",
                 labelText: "Name of Substance"

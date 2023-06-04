@@ -14,7 +14,7 @@ class FirstRoute extends StatelessWidget {
         child: const Text('Add entry'),
         onPressed: (){
             Navigator.push(context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));
+            MaterialPageRoute(builder: (context) => const SecondRoute()));
 
 
           },

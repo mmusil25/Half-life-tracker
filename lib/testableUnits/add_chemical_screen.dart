@@ -25,7 +25,7 @@ Widget build(BuildContext context) {
         TextFormField(
           restorationId: 'chemical_name_field',
           focusNode: _chemName,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             border:  OutlineInputBorder(),
             hintText: "Chemical Name",
             labelText: "Name of Substance"
