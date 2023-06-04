@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Z5iGQPk3Ee2C98KKcW7p5Q" name="learn_UML">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_Z77S8Pk3Ee2C98KKcW7p5Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_pHMt0Pk4Ee2C98KKcW7p5Q" name="Use Cases">
+    <packagedElement xmi:type="uml:Actor" xmi:id="_rkG1IPk4Ee2C98KKcW7p5Q" name="User"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_Y14mAPk5Ee2C98KKcW7p5Q" name="Designer">
+      <generalization xmi:type="uml:Generalization" xmi:id="_bVajgPk5Ee2C98KKcW7p5Q" general="_rkG1IPk4Ee2C98KKcW7p5Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_d6Cm8Pk6Ee2C98KKcW7p5Q" name="Enter New Chemical">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_5GCMQPk8Ee2C98KKcW7p5Q" annotatedElement="_d6Cm8Pk6Ee2C98KKcW7p5Q">
+        <body>Allow for addition of new information when a user consumes a new substance. Saves to device. </body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_kWAk0Pk6Ee2C98KKcW7p5Q" name="View real time amounts">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_D7xmwPk9Ee2C98KKcW7p5Q" annotatedElement="_kWAk0Pk6Ee2C98KKcW7p5Q">
+        <body>Allow user to see current amount of chemical in their body</body>
+      </ownedComment>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_2cB8wPk_Ee2C98KKcW7p5Q" name="ExtensionPoint2"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_phK6wPk9Ee2C98KKcW7p5Q" name="Device Storage"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3p23QPk-Ee2C98KKcW7p5Q" name="View scrollable table">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Gx_7EPk_Ee2C98KKcW7p5Q" general="_kWAk0Pk6Ee2C98KKcW7p5Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_9MLQUPk-Ee2C98KKcW7p5Q" name="Graph amount versus time">
+      <extend xmi:type="uml:Extend" xmi:id="_2cBVsPk_Ee2C98KKcW7p5Q" extendedCase="_kWAk0Pk6Ee2C98KKcW7p5Q" extensionLocation="_2cB8wPk_Ee2C98KKcW7p5Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_sAKFsPk9Ee2C98KKcW7p5Q" name="Store data"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_w-xcIPk6Ee2C98KKcW7p5Q" name="Save"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_t_LegPk6Ee2C98KKcW7p5Q" name="Display"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_oVGQkPk6Ee2C98KKcW7p5Q" name="Input"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qUk1APk6Ee2C98KKcW7p5Q" name="View"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_u7NaMPlAEe2C98KKcW7p5Q" name="High level overview">
+    <packagedElement xmi:type="uml:Activity" xmi:id="_ssN9oPlBEe2C98KKcW7p5Q" name="Chemical Entry Flow" node="_4pgPAPlBEe2C98KKcW7p5Q _h0M1wPlCEe2C98KKcW7p5Q _tYTyIPlCEe2C98KKcW7p5Q _yhD0oPlCEe2C98KKcW7p5Q _CS_cUPlDEe2C98KKcW7p5Q">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_8-UdsPlCEe2C98KKcW7p5Q" target="_h0M1wPlCEe2C98KKcW7p5Q" source="_4pgPAPlBEe2C98KKcW7p5Q"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_-crSEPlCEe2C98KKcW7p5Q" target="_tYTyIPlCEe2C98KKcW7p5Q" source="_h0M1wPlCEe2C98KKcW7p5Q"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="__G5TwPlCEe2C98KKcW7p5Q" target="_yhD0oPlCEe2C98KKcW7p5Q" source="_tYTyIPlCEe2C98KKcW7p5Q"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_FbA9MPlDEe2C98KKcW7p5Q" target="_CS_cUPlDEe2C98KKcW7p5Q" source="_yhD0oPlCEe2C98KKcW7p5Q"/>
+      <node xmi:type="uml:InitialNode" xmi:id="_4pgPAPlBEe2C98KKcW7p5Q" name="Push Entry Form to top of Stack" outgoing="_8-UdsPlCEe2C98KKcW7p5Q"/>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_h0M1wPlCEe2C98KKcW7p5Q" name="Present User with Form" incoming="_8-UdsPlCEe2C98KKcW7p5Q" outgoing="_-crSEPlCEe2C98KKcW7p5Q">
+        <argument xmi:type="uml:ActionInputPin" xmi:id="_kxwzEPlCEe2C98KKcW7p5Q" name="Chemical Data">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_kxz2YPlCEe2C98KKcW7p5Q" value="1"/>
+        </argument>
+      </node>
+      <node xmi:type="uml:CreateObjectAction" xmi:id="_tYTyIPlCEe2C98KKcW7p5Q" name="Instantiate Chemical Object" incoming="_-crSEPlCEe2C98KKcW7p5Q" outgoing="__G5TwPlCEe2C98KKcW7p5Q"/>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_yhD0oPlCEe2C98KKcW7p5Q" name="Save input data to storage" incoming="__G5TwPlCEe2C98KKcW7p5Q" outgoing="_FbA9MPlDEe2C98KKcW7p5Q"/>
+      <node xmi:type="uml:FlowFinalNode" xmi:id="_CS_cUPlDEe2C98KKcW7p5Q" name="Pop entry form from stack" incoming="_FbA9MPlDEe2C98KKcW7p5Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Activity" xmi:id="_e9YSQPlFEe2C98KKcW7p5Q" name="Update data" node="_mJsH8PlFEe2C98KKcW7p5Q _uWaRwPlFEe2C98KKcW7p5Q _-B7S8PlGEe2C98KKcW7p5Q">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_A3hnEPlHEe2C98KKcW7p5Q" target="_uWaRwPlFEe2C98KKcW7p5Q" source="_mJsH8PlFEe2C98KKcW7p5Q"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_BxO2QPlHEe2C98KKcW7p5Q" target="_-B7S8PlGEe2C98KKcW7p5Q" source="_uWaRwPlFEe2C98KKcW7p5Q"/>
+      <node xmi:type="uml:InitialNode" xmi:id="_mJsH8PlFEe2C98KKcW7p5Q" name="Real time screen pushed to top of stack" outgoing="_A3hnEPlHEe2C98KKcW7p5Q"/>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_uWaRwPlFEe2C98KKcW7p5Q" name="Print out chemical amounts" incoming="_A3hnEPlHEe2C98KKcW7p5Q" outgoing="_BxO2QPlHEe2C98KKcW7p5Q">
+        <argument xmi:type="uml:ActionInputPin" xmi:id="_xf9coPlFEe2C98KKcW7p5Q" name="Updated data">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_xf-qwPlFEe2C98KKcW7p5Q" value="1"/>
+        </argument>
+      </node>
+      <node xmi:type="uml:FlowFinalNode" xmi:id="_-B7S8PlGEe2C98KKcW7p5Q" name="Navigate to new route" incoming="_BxO2QPlHEe2C98KKcW7p5Q"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_aDiD4AMIEe6Rc5cye0NX6Q" name="Test Cases">
+    <packagedElement xmi:type="uml:Package" xmi:id="_cKl3AAMIEe6Rc5cye0NX6Q" name="User input storage and retrieval">
+      <packagedElement xmi:type="uml:Activity" xmi:id="_z-1IQAMIEe6Rc5cye0NX6Q" name="Test Input persistence, retrieval" node="_mqAmwAMJEe6Rc5cye0NX6Q _8Ku9QAMJEe6Rc5cye0NX6Q _W40wgAMKEe6Rc5cye0NX6Q _fKHRQAMKEe6Rc5cye0NX6Q _nF1KoAMKEe6Rc5cye0NX6Q _p19v8AMKEe6Rc5cye0NX6Q _rjlvYAMKEe6Rc5cye0NX6Q">
+        <nestedClassifier xmi:type="uml:Component" xmi:id="_2-logAMJEe6Rc5cye0NX6Q" name="Storage Handler"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_t-1p0AMKEe6Rc5cye0NX6Q" target="_8Ku9QAMJEe6Rc5cye0NX6Q" source="_mqAmwAMJEe6Rc5cye0NX6Q"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_uqaWYAMKEe6Rc5cye0NX6Q" target="_W40wgAMKEe6Rc5cye0NX6Q" source="_8Ku9QAMJEe6Rc5cye0NX6Q"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_vOkMUAMKEe6Rc5cye0NX6Q" target="_fKHRQAMKEe6Rc5cye0NX6Q" source="_W40wgAMKEe6Rc5cye0NX6Q"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_w7wt8AMKEe6Rc5cye0NX6Q" target="_nF1KoAMKEe6Rc5cye0NX6Q" source="_fKHRQAMKEe6Rc5cye0NX6Q"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_xxQLgAMKEe6Rc5cye0NX6Q" name="No" target="_p19v8AMKEe6Rc5cye0NX6Q" source="_nF1KoAMKEe6Rc5cye0NX6Q"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_z49e4AMKEe6Rc5cye0NX6Q" name="Yes" target="_rjlvYAMKEe6Rc5cye0NX6Q" source="_nF1KoAMKEe6Rc5cye0NX6Q"/>
+        <node xmi:type="uml:AcceptEventAction" xmi:id="_mqAmwAMJEe6Rc5cye0NX6Q" name="External Chemical Data Received" outgoing="_t-1p0AMKEe6Rc5cye0NX6Q"/>
+        <node xmi:type="uml:CreateObjectAction" xmi:id="_8Ku9QAMJEe6Rc5cye0NX6Q" name="Create Chemical Data Entry" incoming="_t-1p0AMKEe6Rc5cye0NX6Q" outgoing="_uqaWYAMKEe6Rc5cye0NX6Q" classifier="_2-logAMJEe6Rc5cye0NX6Q">
+          <result xmi:type="uml:OutputPin" xmi:id="_8KwLYAMJEe6Rc5cye0NX6Q" name="Chemical Data key-value pairs" type="_2-logAMJEe6Rc5cye0NX6Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8KwLYQMJEe6Rc5cye0NX6Q" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8KwLYgMJEe6Rc5cye0NX6Q" value="1"/>
+          </result>
+        </node>
+        <node xmi:type="uml:CallOperationAction" xmi:id="_W40wgAMKEe6Rc5cye0NX6Q" name="Retrieve chemical data" incoming="_uqaWYAMKEe6Rc5cye0NX6Q" outgoing="_vOkMUAMKEe6Rc5cye0NX6Q"/>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_fKHRQAMKEe6Rc5cye0NX6Q" name="Compare extracted data to input data" incoming="_vOkMUAMKEe6Rc5cye0NX6Q" outgoing="_w7wt8AMKEe6Rc5cye0NX6Q"/>
+        <node xmi:type="uml:DecisionNode" xmi:id="_nF1KoAMKEe6Rc5cye0NX6Q" name="Is equal?" incoming="_w7wt8AMKEe6Rc5cye0NX6Q" outgoing="_xxQLgAMKEe6Rc5cye0NX6Q _z49e4AMKEe6Rc5cye0NX6Q"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_p19v8AMKEe6Rc5cye0NX6Q" name="Test Failed" incoming="_xxQLgAMKEe6Rc5cye0NX6Q"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_rjlvYAMKEe6Rc5cye0NX6Q" name="Test Passed" incoming="_z49e4AMKEe6Rc5cye0NX6Q"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
